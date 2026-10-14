@@ -1,0 +1,12 @@
+---
+availability:
+- place: crm-web::workspace
+references:
+- kind: code
+  role: implementation
+  target: src/components/atomic-crm/providers/supabase/authProvider.ts#getAuthProvider
+---
+
+# Sign out
+
+Leave the CRM on this device.
