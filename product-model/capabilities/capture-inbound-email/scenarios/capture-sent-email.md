@@ -24,7 +24,7 @@ steps:
   contexts:
     email:
       place: inbound-email
-- text: The Product creates a company named after the email domain for each unknown recipient
+- text: The Product creates a company named after the email domain for each unknown recipient in To
   kind: product
   entities:
   - entity: company
@@ -37,7 +37,7 @@ steps:
   contexts:
     email:
       place: inbound-email
-- text: The Product finds each recipient's contact by email, or creates it at that company, managed by the sender
+- text: The Product finds the contact of each recipient in To by email, or creates it at that company, managed by the sender
   kind: product
   entities:
   - entity: contact
@@ -57,7 +57,7 @@ steps:
   contexts:
     email:
       place: inbound-email
-- text: The Product adds the subject and body as a note on each recipient's contact, written by the sender, with the email's attachments, and marks the contact seen now
+- text: The Product adds the subject and body as a note on the contact of each recipient in To, written by the sender, with the email's attachments, and marks the contact seen now
   kind: product
   entities:
   - entity: contact-note
@@ -100,4 +100,5 @@ The email is a note on the contact, which exists along with its company.
 
 ## Edge cases
 
+- Only the recipients in To get a note; people in Cc get none.
 - An existing company is reused when its website or name matches the email domain.

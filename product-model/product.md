@@ -17,7 +17,7 @@ languages:
 limitations:
 - All signed-in users share one set of contacts, companies, deals, notes and tasks.
 - Users are never deleted; an Admin disables an account instead.
-- Only the first account is created by signing up; every later user is created by an Admin.
+- Only the first account is created by signing up; later users are created by an Admin, or by their first Google Workspace sign-in where single sign-on is configured.
 - People sign in with an email and password or, where configured, through Google Workspace single sign-on.
 - Emails reach the CRM only through an external inbound email service.
 references:
